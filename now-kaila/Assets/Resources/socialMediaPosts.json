@@ -1,0 +1,19 @@
+{
+  "posts": [
+    {
+      "username": "catLover420",
+      "content": "I <3 cats so much! They are the best!",
+      "imageUrl": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781440581144/i-love-cats-9781440581144_lg.jpg"
+    },
+    {
+      "username": "doomscrollr",
+      "content": "Why does every app feel the same these days?",
+      "imageUrl": "https://miro.medium.com/1*B8c1ED3QV_yaa6PAWqDgMw.png"
+    },
+    {
+      "username": "aiWatcher",
+      "content": "Not sure what’s real anymore. This post might be fake.",
+      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg"
+    }
+  ]
+}
