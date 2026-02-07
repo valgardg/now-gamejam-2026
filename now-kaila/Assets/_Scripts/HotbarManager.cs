@@ -9,8 +9,8 @@ public class HotbarManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        chatterBoxPanel.SetActive(true);
-        socialMediaPanel.SetActive(false);
+        chatterBoxPanel.SetActive(false);
+        socialMediaPanel.SetActive(true);
     }
 
     public void ToggleChatterBoxPanel()

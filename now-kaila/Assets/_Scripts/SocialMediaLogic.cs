@@ -1,20 +1,21 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-public class ChatterBoxLogic : MonoBehaviour, IDragHandler
+
+public class SocialMediaLogic : MonoBehaviour, IDragHandler
 {
     [Header("UI information")]
     public Canvas canvas;
-    public GameObject chatterBoxPanel;
+    public GameObject socialMediaPanel;
     private RectTransform rectTransform;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rectTransform = chatterBoxPanel.GetComponent<RectTransform>();
+        rectTransform = socialMediaPanel.GetComponent<RectTransform>();
     }
     public void CloseApplication()
     {
-        chatterBoxPanel.SetActive(false);
+        socialMediaPanel.SetActive(false);
     }
     void IDragHandler.OnDrag(PointerEventData eventData)
     {
