@@ -1,16 +1,18 @@
 using UnityEngine;
+using TMPro;
 
 public class MediaPost : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private TMP_Text TXT_username;
+    [SerializeField] private TMP_Text TXT_content;
 
-    // Update is called once per frame
-    void Update()
+    public void Initialize(string username, string content, string url = null)
     {
-        
+        TXT_username.text = username;
+        TXT_content.text = content;
+        if (url != null)
+        {
+            gameObject.GetComponent<LoadURLImage>().CallLoadImage(url);
+        }
     }
 }

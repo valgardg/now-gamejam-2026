@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5062861034275411014}
   - component: {fileID: 940517825179288797}
   - component: {fileID: 2149213817513449056}
+  - component: {fileID: 2561306702413283609}
   m_Layer: 5
   m_Name: PF_MediaPost
   m_TagString: Untagged
@@ -90,6 +91,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34a57dba4f71340beb2c65fa045cc20d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  username: catLover420
+  content: I <3 cats so much! They are the best! People often ask me what I love
+    the most about cats, but I just cant decide! Everything about them is frickin
+    awesome!!! <3 <3 *meow*
+  TXT_username: {fileID: 5989693155014928237}
+  TXT_content: {fileID: 7370045287757890734}
+--- !u!114 &2561306702413283609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732011379392171482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9410958d11b77407f8441f811e152b85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  imageUrl: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png
+  targetImage: {fileID: 1120360668676386150}
 --- !u!1 &3312973413811010703
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,7 +123,7 @@ GameObject:
   - component: {fileID: 2894855313095206623}
   - component: {fileID: 7370045287757890734}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: content
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -155,8 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'here is my long media post about cats and amazing cats and cats and cats
-    caand giet heoriihwer '
+  m_text: <post content>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -240,7 +260,7 @@ GameObject:
   - component: {fileID: 1200603317019028044}
   - component: {fileID: 5989693155014928237}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: username
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -293,7 +313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CatLover420
+  m_text: <username>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -396,8 +416,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4504084019510842064}
   - {fileID: 1313448897910268391}
+  - {fileID: 4504084019510842064}
   m_Father: {fileID: 1106378445457223878}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
