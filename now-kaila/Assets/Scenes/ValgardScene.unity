@@ -1898,7 +1898,8 @@ MonoBehaviour:
   contentParent: {fileID: 1313068497}
   otherUserMessagePrefab: {fileID: 2744861998246484289, guid: 97a20c152593641218d68ea768a72fc1, type: 3}
   playerMessagePrefab: {fileID: 9017831989903725115, guid: 86b3359d6262c41589cb5cfa4b3ce7db, type: 3}
-  scrollRect: {fileID: 0}
+  typingMessagePrefab: {fileID: 5114889636634432858, guid: 5fdfe0190c2f34774b2a12645a0ab7fb, type: 3}
+  scrollRect: {fileID: 734385771}
   autoScrollToBottom: 1
   optionButtonA: {fileID: 1870479181}
   optionLabelA: {fileID: 921774396}
@@ -6831,7 +6832,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000015259, y: 8762.461}
+  m_AnchoredPosition: {x: -0.000015259, y: 8762.459}
   m_SizeDelta: {x: -0.0001, y: 9162.46}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1313068498
@@ -8915,8 +8916,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 375677284}
   m_HandleRect: {fileID: 375677283}
   m_Direction: 2
-  m_Value: -0.00000005572422
-  m_Size: 0.043656398
+  m_Value: 0.00000011144844
+  m_Size: 0.0000001598745
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9993,7 +9994,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f376f0b035d94be88b68dabc3d9f081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SocialMediaPostSpawner
-  postPrefab: {fileID: 2149213817513449056, guid: 893e66e71843a4722ad54e206eb116a9, type: 3}
   postPrefabWithoutImage: {fileID: 2149213817513449056, guid: 893e66e71843a4722ad54e206eb116a9, type: 3}
   postPrefabWithImage: {fileID: 2149213817513449056, guid: c5355655287764632b32728e46c605ea, type: 3}
   contentParent: {fileID: 500698762}

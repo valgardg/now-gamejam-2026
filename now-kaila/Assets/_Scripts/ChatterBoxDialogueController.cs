@@ -13,6 +13,7 @@ public class ChatterBoxDialogueController : MonoBehaviour
     [SerializeField] private Transform contentParent;
     [SerializeField] private ChatMessage otherUserMessagePrefab;
     [SerializeField] private ChatMessage playerMessagePrefab;
+    [SerializeField] private GameObject typingMessagePrefab;
     [SerializeField] private ScrollRect scrollRect;
     [SerializeField] private bool autoScrollToBottom = true;
 
@@ -214,7 +215,20 @@ public class ChatterBoxDialogueController : MonoBehaviour
 
     private IEnumerator AdvanceAfterDelay(string nextId)
     {
+        GameObject typingInstance = null;
+        if (typingMessagePrefab != null && contentParent != null)
+        {
+            typingInstance = Instantiate(typingMessagePrefab, contentParent);
+            RefreshLayout();
+        }
+
         yield return new WaitForSeconds(responseDelaySeconds);
+
+        if (typingInstance != null)
+        {
+            Destroy(typingInstance);
+            RefreshLayout();
+        }
 
         if (nodesById.TryGetValue(nextId, out var next))
         {
