@@ -35,7 +35,8 @@ public class SocialMediaPostSpawner : MonoBehaviour
             postInstance.Initialize(
                 postData.username,
                 postData.content,
-                postData.imageUrl
+                postData.imageUrl,
+                postData.isCluePost 
             );
         }
     }

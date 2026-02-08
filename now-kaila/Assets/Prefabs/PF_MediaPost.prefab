@@ -91,12 +91,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34a57dba4f71340beb2c65fa045cc20d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  username: catLover420
-  content: I <3 cats so much! They are the best! People often ask me what I love
-    the most about cats, but I just cant decide! Everything about them is frickin
-    awesome!!! <3 <3 *meow*
   TXT_username: {fileID: 5989693155014928237}
   TXT_content: {fileID: 7370045287757890734}
+  isClue: 0
 --- !u!114 &2561306702413283609
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ public class HotbarManager : MonoBehaviour
     void Start()
     {
         chatterBoxPanel.SetActive(true);
-        socialMediaPanel.SetActive(false);
+        socialMediaPanel.SetActive(true);
         audioSliderVisual.SetActive(false);
     }
 

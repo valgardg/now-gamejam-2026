@@ -3,17 +3,87 @@
     {
       "username": "catLover420",
       "content": "I <3 cats so much! They are the best!",
-      "imageUrl": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781440581144/i-love-cats-9781440581144_lg.jpg"
+      "imageUrl": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781440581144/i-love-cats-9781440581144_lg.jpg",
+      "isCluePost":false
     },
     {
       "username": "doomscrollr",
       "content": "Why does every app feel the same these days?",
-      "imageUrl": "https://miro.medium.com/1*B8c1ED3QV_yaa6PAWqDgMw.png"
+      "imageUrl": "https://miro.medium.com/1*B8c1ED3QV_yaa6PAWqDgMw.png",
+      "isCluePost": false
     },
     {
       "username": "aiWatcher",
-      "content": "Not sure what’s real anymore. This post might be fake.",
-      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg"
+      "content": "Not sure what's real anymore. This post might be fake.",
+      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "isCluePost": false
+    },
+    {
+      "username": "Kaila_Manning01",
+      "content": "Art is such a fun way of expressing oneself!", 
+      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "isCluePost": true
+    },
+    {
+      "username": "ScoobyDoobieDoo",
+      "content": "Anyone else excited for the new scooby doo game???? Just me???",
+      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "isCluePost": false
+    },
+    {
+      "username": "cup404",
+      "content": "INSERT IZZY TWEET",
+      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "isCluePost": false
+    },
+    {
+      "username": "FrostyAria",
+      "content": "INSERT ARIA TWEET",
+      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "isCluePost": false
+    },
+    {
+      "username": "J4n13_",
+      "content": "What is with the recent influx of AI bots? It is getting out of",
+      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "isCluePost": false
+    },
+    {
+      "username": "FrogEnthusiast",
+      "content": "Ribbit ribbit! Frog fact of the day: Did you know that there are around 7,600 frog species in the world???",
+      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "isCluePost": false
+    },
+    {
+      "username": "Kaila_Manning01",
+      "content": "Hello! I am Kaila, a freelance artist! I can draw anything for you, just shoot me a DM.",
+      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "isCluePost": false
+    },
+    {
+      "username": "User0912974",
+      "content": "Real talk. Waffles or pancakes?",
+      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "isCluePost": false
+    },
+    {
+      "username": "FrogEnthusiast",
+      "content": "Ribbit ribbit! Frog fact of the day: Frogs Its not slime, its mucus!",
+      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "isCluePost": false
+    },
+    {
+      "username": "FrogEnthusiast",
+      "content": "Ribbit ribbit! Frog fact of the day: Frogs Its not slime, its mucus!",
+      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "isCluePost": false
+    }
+    ,
+    {
+      "username": "Kaila_Manning01",
+      "content": "Here is my latest art!",
+      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "isCluePost": true
     }
   ]
 }

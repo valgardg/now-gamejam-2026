@@ -4,6 +4,7 @@ public class SocialMediaPostData
     public string username;
     public string content;
     public string imageUrl;
+    public bool isCluePost;
 }
 
 [System.Serializable]
