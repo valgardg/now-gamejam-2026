@@ -73,7 +73,7 @@
       "message": "Thank you! I have spent a long time working on my art now. It's not about skill, it's about expression.",
       "options": [
         { "text": "Anyways, I got to go", "nextNodeId": "goodbye" },
-        { "text": "Actually, no. I think that your faking it.", "nextNodeId": "confront_start" }
+        { "text": "Actually, no. I think that your faking it.", "nextNodeId": "confront_Start" }
       ]
     },
     {
@@ -82,7 +82,7 @@
       "message": "Of course it is! I spent a lot of time creating the pieces I have posted on ShareSpace.",
       "options": [
         { "text": "Okay... sory, it just looked a bit ai generated", "nextNodeId": "AggressivePassive" },
-        { "text": "I dont believe that", "nextNodeId": "confront_start" }
+        { "text": "I dont believe that", "nextNodeId": "confront_Start" }
       ]
     },
     {
