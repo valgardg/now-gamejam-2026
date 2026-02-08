@@ -17,4 +17,16 @@ public class MediaPost : MonoBehaviour
             gameObject.GetComponent<LoadURLImage>().CallLoadImage(url);
         }
     }
+    public void wasClicked()
+    {
+        if (isClue)
+        {
+            FindObjectOfType<HotbarManager>().UpdateClueCounter(1);
+            Debug.Log("I am a clue");
+        }
+        else
+        {
+            Debug.Log("I am a regular post");
+        }
+    }
 }
