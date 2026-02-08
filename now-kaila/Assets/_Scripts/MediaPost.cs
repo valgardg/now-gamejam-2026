@@ -14,9 +14,6 @@ public class MediaPost : MonoBehaviour
     [SerializeField] private Image profileImageTarget;
     [SerializeField] private Image postImageTarget;
 
-    // Button on a child object that users click
-    [SerializeField] private Button clickButton;
-
     // Dialogue system reference (optional; will fallback to FindObjectOfType)
     [SerializeField] private ChatterBoxDialogueController dialogueController;
 
@@ -48,13 +45,6 @@ public class MediaPost : MonoBehaviour
 
         // Load post image (resource preferred)
         SetImageFromResourceOrUrl(postImageTarget, postImageResource, postImageUrl);
-
-        // Wire button click once on spawn
-        if (clickButton != null)
-        {
-            clickButton.onClick.RemoveAllListeners();
-            clickButton.onClick.AddListener(OnClicked);
-        }
     }
 
     private void SetImageFromResourceOrUrl(Image target, string resourcePath, string url)
