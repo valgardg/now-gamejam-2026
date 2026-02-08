@@ -3,86 +3,99 @@
     {
       "username": "catLover420",
       "content": "I <3 cats so much! They are the best!",
-      "imageUrl": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781440581144/i-love-cats-9781440581144_lg.jpg",
-      "isCluePost":false
+      "profileImageUrl": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781440581144/i-love-cats-9781440581144_lg.jpg",
+      "postImageUrl": null,
+      "isCluePost": false
     },
     {
       "username": "doomscrollr",
       "content": "Why does every app feel the same these days?",
-      "imageUrl": "https://miro.medium.com/1*B8c1ED3QV_yaa6PAWqDgMw.png",
+      "profileImageUrl": "https://miro.medium.com/1*B8c1ED3QV_yaa6PAWqDgMw.png",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "aiWatcher",
       "content": "Not sure what's real anymore. This post might be fake.",
-      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "profileImageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "Kaila_Manning01",
-      "content": "Art is such a fun way of expressing oneself!", 
-      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "content": "Art is such a fun way of expressing oneself!",
+      "profileImageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "postImageUrl": null,
       "isCluePost": true
     },
     {
       "username": "ScoobyDoobieDoo",
       "content": "Anyone else excited for the new scooby doo game???? Just me???",
-      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "profileImageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "cup404",
       "content": "INSERT IZZY TWEET",
-      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "profileImageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "FrostyAria",
       "content": "INSERT ARIA TWEET",
-      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "profileImageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "J4n13_",
       "content": "What is with the recent influx of AI bots? It is getting out of",
-      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "profileImageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "FrogEnthusiast",
       "content": "Ribbit ribbit! Frog fact of the day: Did you know that there are around 7,600 frog species in the world???",
-      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "profileImageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "Kaila_Manning01",
       "content": "Hello! I am Kaila, a freelance artist! I can draw anything for you, just shoot me a DM.",
-      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "profileImageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "User0912974",
       "content": "Real talk. Waffles or pancakes?",
-      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "profileImageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "FrogEnthusiast",
       "content": "Ribbit ribbit! Frog fact of the day: Frogs Its not slime, its mucus!",
-      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "profileImageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "FrogEnthusiast",
       "content": "Ribbit ribbit! Frog fact of the day: Frogs Its not slime, its mucus!",
-      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "profileImageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "postImageUrl": null,
       "isCluePost": false
-    }
-    ,
+    },
     {
       "username": "Kaila_Manning01",
       "content": "Here is my latest art!",
-      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "profileImageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "postImageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
       "isCluePost": true,
       "conversationStartNodeId": "test_user_reply",
       "initialUserMessage": "Hey Kaila, it's me."
@@ -90,116 +103,134 @@
     {
       "username": "cupnooooooodles",
       "content": "dear lord i just found a photo of myself in year 8 wearing a choker and knee length converse to school #whoRemembers",
-      "imageUrl": "https://ibb.co/FLxjnprm",
+      "profileImageUrl": "https://ibb.co/FLxjnprm",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "jakeyD",
       "content": "Yoo just hit the craziest clip in billiards today if only i recorded it",
-      "imageUrl": "https://ibb.co/FLxjnprm",
+      "profileImageUrl": "https://ibb.co/FLxjnprm",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "cupnooooooodles",
       "content": "gonna try fake lashes for the first time tewday!!! WISH ME LUCK I'M GOIN IN BOYS",
-      "imageUrl": "https://ibb.co/FLxjnprm",
+      "profileImageUrl": "https://ibb.co/FLxjnprm",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "cupnooooooodles",
       "content": "ok so APPARENTLY i'm not supposed to use superglue So I Mayyyy have made a little Oopsie",
-      "imageUrl": "https://ibb.co/FLxjnprm",
+      "profileImageUrl": "https://ibb.co/FLxjnprm",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "cupnooooooodles",
       "content": "OK GUYS i TAKE BACK MY LAST POST THIS IS REALLY NOT FUNNY I THINK THESE LASHES HAVE BEEN WELDED PERMANENTLY TO MY FACE",
-      "imageUrl": "https://ibb.co/FLxjnprm",
+      "profileImageUrl": "https://ibb.co/FLxjnprm",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "cupnooooooodles",
       "content": "how do you get superglue off your eyelid? asking for a friend.",
-      "imageUrl": "https://ibb.co/FLxjnprm",
+      "profileImageUrl": "https://ibb.co/FLxjnprm",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "cupnooooooodles",
       "content": "no guys i'm actually not ikidding this is BAD.",
-      "imageUrl": "https://ibb.co/FLxjnprm",
+      "profileImageUrl": "https://ibb.co/FLxjnprm",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "cupnooooooodles",
       "content": "Good news: I went to the emergency room. Bad news: I don't have eyelashes anymore.",
-      "imageUrl": "https://ibb.co/FLxjnprm",
+      "profileImageUrl": "https://ibb.co/FLxjnprm",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "Falafel_Enjoyer",
       "content": "Just got falafel #iLoveMyLife",
-      "imageUrl": "https://ibb.co/FLxjnprm",
+      "profileImageUrl": "https://ibb.co/FLxjnprm",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "User42069",
       "content": "Mint chocolate does NOT taste like toothpaste???",
-      "imageUrl": "https://ibb.co/FLxjnprm",
+      "profileImageUrl": "https://ibb.co/FLxjnprm",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "splattershot",
       "content": "GUYSSS hop on!! My lobby code is X48whgV :P",
-      "imageUrl": "https://ibb.co/FLxjnprm",
+      "profileImageUrl": "https://ibb.co/FLxjnprm",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "Rapid_blaster",
       "content": "just setting up my twtr",
-      "imageUrl": "https://ibb.co/FLxjnprm",
+      "profileImageUrl": "https://ibb.co/FLxjnprm",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "flatearththeory",
       "content": "Guys, is global warming real?",
-      "imageUrl": "https://ibb.co/FLxjnprm",
+      "profileImageUrl": "https://ibb.co/FLxjnprm",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "simonschofeld",
       "content": "My 5 year old just said this to me: Father, we need to begin speaking about the socioeconomic state of the world. Wow, I couldn't be more proud of my talented son",
-      "imageUrl": "https://ibb.co/FLxjnprm",
+      "profileImageUrl": "https://ibb.co/FLxjnprm",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "I_LUV_KITTIES",
       "content": "Sometimes when I think about all the cats in the world that don't have homes I burst into tears",
-      "imageUrl": "https://ibb.co/FLxjnprm",
+      "profileImageUrl": "https://ibb.co/FLxjnprm",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "realMinions",
       "content": "Banana!",
-      "imageUrl": "https://ibb.co/FLxjnprm",
+      "profileImageUrl": "https://ibb.co/FLxjnprm",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "realMinions",
       "content": "Papoy! Follow our account for more minion madness.",
-      "imageUrl": "https://ibb.co/FLxjnprm",
+      "profileImageUrl": "https://ibb.co/FLxjnprm",
+      "postImageUrl": null,
       "isCluePost": false
-    }
-    ,
+    },
     {
       "username": "TestUserStart",
       "content": "Start a chat where I speak first.",
-      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "profileImageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "postImageUrl": null,
       "isCluePost": false
     },
     {
       "username": "TestOtherStart",
       "content": "Start a chat where Kaila speaks first.",
-      "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "profileImageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
+      "postImageUrl": null,
       "isCluePost": true,
       "conversationStartNodeId": "test_intro"
     }

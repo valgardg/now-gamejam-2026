@@ -8,6 +8,10 @@ public class MediaPost : MonoBehaviour
     [SerializeField] private TMP_Text TXT_content;
     [SerializeField] private bool isClue = false;
 
+    // New: separate image targets
+    [SerializeField] private Image profileImageTarget;
+    [SerializeField] private Image postImageTarget;
+
     // Button on a child object that users click
     [SerializeField] private Button clickButton;
 
@@ -21,10 +25,13 @@ public class MediaPost : MonoBehaviour
     public void Initialize(
         string username,
         string content,
-        string url = null,
+        string profileImageUrl = null,
+        string postImageUrl = null,
         bool isCluePost = false,
         string conversationStartNodeId = null,
-        string initialUserMessage = null
+        string initialUserMessage = null,
+        string profileImageResource = null,
+        string postImageResource = null
     )
     {
         TXT_username.text = username;
@@ -34,16 +41,45 @@ public class MediaPost : MonoBehaviour
         this.conversationStartNodeId = conversationStartNodeId;
         this.initialUserMessage = initialUserMessage;
 
-        if (url != null)
-        {
-            gameObject.GetComponent<LoadURLImage>().CallLoadImage(url);
-        }
+        // Load profile image (resource preferred)
+        SetImageFromResourceOrUrl(profileImageTarget, profileImageResource, profileImageUrl);
+
+        // Load post image (resource preferred)
+        SetImageFromResourceOrUrl(postImageTarget, postImageResource, postImageUrl);
 
         // Wire button click once on spawn
         if (clickButton != null)
         {
             clickButton.onClick.RemoveAllListeners();
             clickButton.onClick.AddListener(OnClicked);
+        }
+    }
+
+    private void SetImageFromResourceOrUrl(Image target, string resourcePath, string url)
+    {
+        if (target == null) return;
+
+        // Prefer local resource if provided
+        if (!string.IsNullOrEmpty(resourcePath))
+        {
+            var sprite = Resources.Load<Sprite>(resourcePath);
+            if (sprite != null)
+            {
+                target.sprite = sprite;
+                return;
+            }
+            else
+            {
+                Debug.LogWarning($"MediaPost: Resource sprite not found at '{resourcePath}'. Falling back to URL, if any.");
+            }
+        }
+
+        // Fallback to URL
+        if (!string.IsNullOrEmpty(url))
+        {
+            var loader = gameObject.GetComponent<LoadURLImage>();
+            if (loader == null) loader = gameObject.AddComponent<LoadURLImage>();
+            loader.CallLoadImageTo(target, url);
         }
     }
 

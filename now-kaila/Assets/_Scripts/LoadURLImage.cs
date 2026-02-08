@@ -8,17 +8,39 @@ public class LoadURLImage : MonoBehaviour
     [SerializeField] private string imageUrl = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png";
     [SerializeField] private Image targetImage;
 
+    // New: optional auto loading toggle (disabled by default)
+    [SerializeField] private bool autoLoadOnStart = false;
+
     void Start()
     {
-        StartCoroutine(LoadImage(imageUrl));
+        if (autoLoadOnStart && targetImage != null && !string.IsNullOrEmpty(imageUrl))
+        {
+            StartCoroutine(LoadImageTo(targetImage, imageUrl));
+        }
     }
 
     public void CallLoadImage(string imageUrl)
     {
-        StartCoroutine(LoadImage(imageUrl));
+        if (targetImage == null)
+        {
+            Debug.LogWarning("LoadURLImage: targetImage is null.");
+            return;
+        }
+        StartCoroutine(LoadImageTo(targetImage, imageUrl));
     }
 
-    IEnumerator LoadImage(string url)
+    // New: load into an arbitrary Image target
+    public void CallLoadImageTo(Image target, string imageUrl)
+    {
+        if (target == null)
+        {
+            Debug.LogWarning("LoadURLImage: provided target Image is null.");
+            return;
+        }
+        StartCoroutine(LoadImageTo(target, imageUrl));
+    }
+
+    IEnumerator LoadImageTo(Image target, string url)
     {
         using (UnityWebRequest request = UnityWebRequestTexture.GetTexture(url))
         {
@@ -38,7 +60,7 @@ public class LoadURLImage : MonoBehaviour
                 new Vector2(0.5f, 0.5f)
             );
 
-            targetImage.sprite = sprite;
+            target.sprite = sprite;
             Debug.Log("Updated target image!");
         }
     }

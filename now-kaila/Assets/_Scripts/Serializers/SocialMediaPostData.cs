@@ -5,7 +5,16 @@ public class SocialMediaPostData
 {
     public string username;
     public string content;
-    public string imageUrl;
+
+    // New image fields
+    public string profileImageUrl;       // replaces old imageUrl
+    public string postImageUrl;          // optional: image shown within the post
+
+    // Optional local resource paths (Assets/Resources/...).
+    // Example: "Art/KailaProfile" to load Assets/Resources/Art/KailaProfile (Sprite)
+    public string profileImageResource;
+    public string postImageResource;
+
     public bool isCluePost;
 
     // Conversation metadata for clue posts

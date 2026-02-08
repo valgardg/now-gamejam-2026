@@ -31,14 +31,17 @@ public class SocialMediaPostSpawner : MonoBehaviour
         {
             MediaPost postInstance = Instantiate(postPrefab, contentParent);
 
-            // Pass conversation metadata for clue posts
+            // Pass conversation metadata and image data
             postInstance.Initialize(
                 postData.username,
                 postData.content,
-                postData.imageUrl,
+                postData.profileImageUrl,
+                postData.postImageUrl,
                 postData.isCluePost,
                 postData.conversationStartNodeId,
-                postData.initialUserMessage
+                postData.initialUserMessage,
+                postData.profileImageResource,
+                postData.postImageResource
             );
         }
     }
