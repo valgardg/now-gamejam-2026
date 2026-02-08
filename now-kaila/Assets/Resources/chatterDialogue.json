@@ -1,32 +1,42 @@
 {
-  "startNodeId": "intro",
+  "startNodeId": "art",
   "nodes": [
     {
-      "id": "intro",
-      "speaker": "Friend",
-      "message": "Hey! Ready for the jam?",
+      "id": "art",
+      "speaker": "Kaila",
+      "message": "Really? What did you think of it? Isn't it cool, neat and exciting?",
       "options": [
-        { "text": "Absolutely!", "nextNodeId": "enthusiastic" },
-        { "text": "Feeling nervous...", "nextNodeId": "nervous" }
+        { "text": "Yeah... it looks pretty good", "nextNodeId": "passive" },
+        { "text": "Is the art you post really made by you?", "nextNodeId": "aggressive" }
       ]
     },
     {
-      "id": "enthusiastic",
-      "speaker": "Friend",
-      "message": "Love the energy! Let's ship something.",
+      "id": "passive",
+      "speaker": "Kaila",
+      "message": "Thank you! I have spent a long time working on my art now. It's not about skill, it's about expression.",
       "options": [
-        { "text": "Let's go!", "nextNodeId": "" },
-        { "text": "Wait, one sec...", "nextNodeId": "" }
+        { "text": "Anyways, I got to go", "nextNodeId": "goodbye" },
+        { "text": "Actually, no. I think that your faking it.", "nextNodeId": "" }
       ]
     },
     {
-      "id": "nervous",
-      "speaker": "Friend",
-      "message": "You'll do great. Start small and iterate.",
+      "id": "aggressive",
+      "speaker": "Kaila",
+      "message": "Of course it is! I spent a lot of time creating the pieces I have posted on ShareSpace.",
       "options": [
-        { "text": "Thanks!", "nextNodeId": "" },
-        { "text": "Any tips?", "nextNodeId": "" }
+        { "text": "Okay... sory, it just looked a bit ai generated", "nextNodeId": "AggressivePassive" },
+        { "text": "I dont believe that", "nextNodeId": "" }
       ]
+    },
+    {
+      "id": "AggressivePassive",
+      "speaker": "Kaila",
+      "message": "That's okay. Everyone makes msitakes, and I can understand the feat-- especially in today's AI driven world.."
+    },
+    {
+      "id": "goodbye",
+      "speaker": "Kaila",
+      "message": "Alrighty, talk to you later!"
     }
   ]
 }
