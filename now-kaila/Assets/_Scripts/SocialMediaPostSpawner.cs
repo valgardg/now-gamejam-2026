@@ -3,7 +3,9 @@ using UnityEngine;
 public class SocialMediaPostSpawner : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private MediaPost postPrefab;
+    [SerializeField] private MediaPost postPrefab; // fallback / legacy
+    [SerializeField] private MediaPost postPrefabWithoutImage; // used when no post image is supplied
+    [SerializeField] private MediaPost postPrefabWithImage;    // used when a post image is supplied
     [SerializeField] private Transform contentParent;
 
     [Header("Data")]
@@ -29,7 +31,27 @@ public class SocialMediaPostSpawner : MonoBehaviour
 
         foreach (SocialMediaPostData postData in postList.posts)
         {
-            MediaPost postInstance = Instantiate(postPrefab, contentParent);
+            // Decide which prefab to use based on presence of a post image
+            bool hasPostImage =
+                !string.IsNullOrEmpty(postData.postImageUrl) ||
+                !string.IsNullOrEmpty(postData.postImageResource);
+
+            MediaPost prefabToUse = null;
+            if (hasPostImage && postPrefabWithImage != null)
+            {
+                prefabToUse = postPrefabWithImage;
+            }
+            else if (!hasPostImage && postPrefabWithoutImage != null)
+            {
+                prefabToUse = postPrefabWithoutImage;
+            }
+            else
+            {
+                // Fallback to legacy single prefab if specific ones are not assigned
+                prefabToUse = postPrefab;
+            }
+
+            MediaPost postInstance = Instantiate(prefabToUse, contentParent);
 
             // Pass conversation metadata and image data
             postInstance.Initialize(

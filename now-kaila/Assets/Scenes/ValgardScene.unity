@@ -6831,7 +6831,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000015259, y: 8762.46}
+  m_AnchoredPosition: {x: -0.000015259, y: 8762.461}
   m_SizeDelta: {x: -0.0001, y: 9162.46}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1313068498
@@ -8274,7 +8274,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 884552032}
   m_HandleRect: {fileID: 884552031}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -8915,8 +8915,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 375677284}
   m_HandleRect: {fileID: 375677283}
   m_Direction: 2
-  m_Value: 0.00000005572422
-  m_Size: 0.000000106583
+  m_Value: -0.00000005572422
+  m_Size: 0.043656398
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9994,6 +9994,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SocialMediaPostSpawner
   postPrefab: {fileID: 2149213817513449056, guid: 893e66e71843a4722ad54e206eb116a9, type: 3}
+  postPrefabWithoutImage: {fileID: 2149213817513449056, guid: 893e66e71843a4722ad54e206eb116a9, type: 3}
+  postPrefabWithImage: {fileID: 2149213817513449056, guid: c5355655287764632b32728e46c605ea, type: 3}
   contentParent: {fileID: 500698762}
   jsonFileName: socialMediaPosts
 --- !u!4 &1910164920
