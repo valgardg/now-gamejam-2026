@@ -1,0 +1,32 @@
+{
+  "startNodeId": "intro",
+  "nodes": [
+    {
+      "id": "intro",
+      "speaker": "Friend",
+      "message": "Hey! Ready for the jam?",
+      "options": [
+        { "text": "Absolutely!", "nextNodeId": "enthusiastic" },
+        { "text": "Feeling nervous...", "nextNodeId": "nervous" }
+      ]
+    },
+    {
+      "id": "enthusiastic",
+      "speaker": "Friend",
+      "message": "Love the energy! Let's ship something.",
+      "options": [
+        { "text": "Let's go!", "nextNodeId": "" },
+        { "text": "Wait, one sec...", "nextNodeId": "" }
+      ]
+    },
+    {
+      "id": "nervous",
+      "speaker": "Friend",
+      "message": "You'll do great. Start small and iterate.",
+      "options": [
+        { "text": "Thanks!", "nextNodeId": "" },
+        { "text": "Any tips?", "nextNodeId": "" }
+      ]
+    }
+  ]
+}
