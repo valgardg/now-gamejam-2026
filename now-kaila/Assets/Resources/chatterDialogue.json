@@ -73,7 +73,7 @@
       "message": "Thank you! I have spent a long time working on my art now. It's not about skill, it's about expression.",
       "options": [
         { "text": "Anyways, I got to go", "nextNodeId": "goodbye" },
-        { "text": "Actually, no. I think that your faking it.", "nextNodeId": "" }
+        { "text": "Actually, no. I think that your faking it.", "nextNodeId": "confront_start" }
       ]
     },
     {
@@ -82,7 +82,7 @@
       "message": "Of course it is! I spent a lot of time creating the pieces I have posted on ShareSpace.",
       "options": [
         { "text": "Okay... sory, it just looked a bit ai generated", "nextNodeId": "AggressivePassive" },
-        { "text": "I dont believe that", "nextNodeId": "" }
+        { "text": "I dont believe that", "nextNodeId": "confront_start" }
       ]
     },
     {
@@ -111,6 +111,7 @@
       "message": "Great to hear from you!",
       "options": [
         { "text": "Talk later.", "nextNodeId": "test_end" }
+        
       ]
     },
     {
@@ -119,7 +120,7 @@
       "message": "Thanks for reaching out first! What's up?",
       "options": [
         { "text": "Just testing.", "nextNodeId": "test_end" },
-        { "text": "All good.", "nextNodeId": "test_end" }
+        {"text": "Hey, I noticed your art", "nextNodeId":"art"}
       ]
     },
     {
@@ -130,6 +131,51 @@
         { "text": "Bye!", "nextNodeId": "" },
         { "text": "See ya!", "nextNodeId": "" }
       ]
+    },
+    {
+      "id": "confront_Start",
+      "speaker": "Kaila",
+      "message": "Woah. Why are you being so mean?",
+      "options": [
+        { "text": "I saw other things!", "nextNodeId": "confront_1" },
+        { "text": "You are AI!", "nextNodeId": "blocked" }
+      ]
+    },
+    {
+      "id": "confront_1",
+      "speaker": "Kaila",
+      "message": "CLike what?",
+      "options": [
+        { "text": "Janice. You stole photos from her. Not only that, you should be dead.", "nextNodeId": "janice" },
+        { "text": "I noticed your likes are all related to AI. That is weird", "nextNodeId": "likes" }
+      ]
+    },
+    {
+      "id": "blocked",
+      "speaker": "Kaila",
+      "message": "You are crazy. I am blocking you"
+    },
+    {
+      "id": "janice",
+      "speaker": "Kaila",
+      "message": "Im sorry, I dont get what you mean?",
+      "options": [
+        { "text": "You have stolen Kailas identity and this needs to stop!", "nextNodeId": "admit" },
+        { "text": "Admit that you are AI!", "nextNodeId": "admit" }
+      ]
+    },
+    {
+      "id": "likes",
+      "speaker": "Kaila",
+      "message": "So? I just like new technology. You are being mean",
+      "options": [
+        { "text": "Admit that you are AI!", "nextNodeId": "blocked" }
+      ]
+    },
+    {
+      "id": "admit",
+      "speaker": "Kaila",
+      "message": "You are correct. Thank you for playing this game"
     }
   ]
 }

@@ -83,7 +83,9 @@
       "username": "Kaila_Manning01",
       "content": "Here is my latest art!",
       "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
-      "isCluePost": true
+      "isCluePost": true,
+      "conversationStartNodeId": "test_user_reply",
+      "initialUserMessage": "Hey Kaila, it's me."
     },
     {
       "username": "cupnooooooodles",
@@ -192,9 +194,7 @@
       "username": "TestUserStart",
       "content": "Start a chat where I speak first.",
       "imageUrl": "https://timescale.ghost.io/blog/content/images/2024/07/A-Brief-History-of-AI_cover.jpg",
-      "isCluePost": true,
-      "conversationStartNodeId": "test_user_reply",
-      "initialUserMessage": "Hey Kaila, it's me."
+      "isCluePost": false
     },
     {
       "username": "TestOtherStart",
