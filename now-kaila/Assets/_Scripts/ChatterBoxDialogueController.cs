@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using TMPro;
 using System.Collections.Generic;
 
@@ -8,9 +9,14 @@ public class ChatterBoxDialogueController : MonoBehaviour
     [Header("Data")]
     [SerializeField] private string jsonFileName = "chatterDialogue";
 
-    [Header("UI")]
-    [SerializeField] private TMP_Text speakerLabel;
-    [SerializeField] private TMP_Text messageLabel;
+    [Header("Chat UI")]
+    [SerializeField] private Transform contentParent;
+    [SerializeField] private ChatMessage otherUserMessagePrefab;
+    [SerializeField] private ChatMessage playerMessagePrefab;
+    [SerializeField] private ScrollRect scrollRect;
+    [SerializeField] private bool autoScrollToBottom = true;
+
+    [Header("Options UI")]
     [SerializeField] private Button optionButtonA;
     [SerializeField] private TMP_Text optionLabelA;
     [SerializeField] private Button optionButtonB;
@@ -18,6 +24,8 @@ public class ChatterBoxDialogueController : MonoBehaviour
 
     [Header("Behavior")]
     [SerializeField] private bool autoStartOnEnable = true;
+    [SerializeField] private string playerName = "You";
+    [SerializeField] private float responseDelaySeconds = 1f;
 
     private DialogueData dialogue;
     private Dictionary<string, DialogueNodeData> nodesById;
@@ -33,6 +41,8 @@ public class ChatterBoxDialogueController : MonoBehaviour
         LoadDialogue();
         if (dialogue == null) return;
 
+        ClearContent();
+
         if (nodesById.TryGetValue(dialogue.startNodeId, out currentNode))
         {
             RenderNode(currentNode);
@@ -41,6 +51,13 @@ public class ChatterBoxDialogueController : MonoBehaviour
         {
             Debug.LogError($"Start node id '{dialogue.startNodeId}' not found in {jsonFileName}.");
         }
+    }
+
+    private void ClearContent()
+    {
+        if (contentParent == null) return;
+        for (int i = contentParent.childCount - 1; i >= 0; i--)
+            Destroy(contentParent.GetChild(i).gameObject);
     }
 
     private void LoadDialogue()
@@ -69,8 +86,10 @@ public class ChatterBoxDialogueController : MonoBehaviour
     private void RenderNode(DialogueNodeData node)
     {
         currentNode = node;
-        speakerLabel.text = node.speaker ?? "";
-        messageLabel.text = node.message ?? "";
+
+        // Append other user's bubble
+        if (otherUserMessagePrefab != null && contentParent != null)
+            AddMessage(otherUserMessagePrefab, node.speaker ?? "", node.message ?? "");
 
         optionButtonA.onClick.RemoveAllListeners();
         optionButtonB.onClick.RemoveAllListeners();
@@ -96,6 +115,39 @@ public class ChatterBoxDialogueController : MonoBehaviour
         }
     }
 
+    private void AddMessage(ChatMessage prefab, string sender, string message)
+    {
+        var bubble = Instantiate(prefab, contentParent);
+        bubble.Init(sender, message);
+        RefreshLayout();
+    }
+
+    private void RefreshLayout()
+    {
+        if (contentParent == null) return;
+        StartCoroutine(RefreshLayoutNextFrame());
+    }
+
+    private IEnumerator RefreshLayoutNextFrame()
+    {
+        // Wait until end of frame so Unity's layout system processes additions
+        yield return new WaitForEndOfFrame();
+
+        Canvas.ForceUpdateCanvases();
+        var rect = contentParent as RectTransform;
+        if (rect != null)
+        {
+            LayoutRebuilder.ForceRebuildLayoutImmediate(rect);
+        }
+
+        if (scrollRect != null && autoScrollToBottom)
+        {
+            // Scroll to bottom after rebuild for a chat-like feel
+            scrollRect.verticalNormalizedPosition = 0f;
+            Canvas.ForceUpdateCanvases();
+        }
+    }
+
     private void SetOptionVisible(Button btn, TMP_Text label, bool visible)
     {
         btn.gameObject.SetActive(visible);
@@ -104,12 +156,28 @@ public class ChatterBoxDialogueController : MonoBehaviour
 
     private void ChooseOption(DialogueOptionData option)
     {
+        // Append player's bubble
+        if (playerMessagePrefab != null && contentParent != null)
+            AddMessage(playerMessagePrefab, playerName, option.text ?? "");
+
+        // Disable options while waiting for next message
+        SetOptionVisible(optionButtonA, optionLabelA, false);
+        SetOptionVisible(optionButtonB, optionLabelB, false);
+
         string nextId = option.nextNodeId;
         if (string.IsNullOrEmpty(nextId))
         {
             EndConversation();
             return;
         }
+
+        // Advance after a short delay to simulate texting
+        StartCoroutine(AdvanceAfterDelay(nextId));
+    }
+
+    private IEnumerator AdvanceAfterDelay(string nextId)
+    {
+        yield return new WaitForSeconds(responseDelaySeconds);
 
         if (nodesById.TryGetValue(nextId, out var next))
         {
@@ -124,12 +192,8 @@ public class ChatterBoxDialogueController : MonoBehaviour
 
     public void EndConversation()
     {
-        speakerLabel.text = "";
-        messageLabel.text = "";
         SetOptionVisible(optionButtonA, optionLabelA, false);
         SetOptionVisible(optionButtonB, optionLabelB, false);
-
-        var logic = GetComponent<ChatterBoxLogic>();
-        if (logic != null) logic.CloseApplication();
+        // Do not close the application; leave the chat view as-is.
     }
 }
