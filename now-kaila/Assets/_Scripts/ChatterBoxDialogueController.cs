@@ -53,6 +53,41 @@ public class ChatterBoxDialogueController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Triggers a conversation starting at a specific node. Optionally, prepend a player's initial message.
+    /// </summary>
+    /// <param name="startNodeId">The id of the node to start from (usually the other user's first reply).</param>
+    /// <param name="initialUserMessage">Optional: if provided, a player bubble is added first, then the conversation advances to startNode after a delay.</param>
+    public void TriggerConversation(string startNodeId, string initialUserMessage = null)
+    {
+        LoadDialogue();
+        if (dialogue == null) return;
+
+        // Hide any stale options from previous state
+        SetOptionVisible(optionButtonA, optionLabelA, false);
+        SetOptionVisible(optionButtonB, optionLabelB, false);
+
+        // If the player starts, add their bubble and then advance after the configured delay
+        if (!string.IsNullOrEmpty(initialUserMessage))
+        {
+            if (playerMessagePrefab != null && contentParent != null)
+                AddMessage(playerMessagePrefab, playerName, initialUserMessage);
+
+            StartCoroutine(AdvanceAfterDelay(startNodeId));
+            return;
+        }
+
+        // Otherwise, render the starting node immediately
+        if (nodesById != null && nodesById.TryGetValue(startNodeId, out currentNode))
+        {
+            RenderNode(currentNode);
+        }
+        else
+        {
+            Debug.LogError($"Start node id '{startNodeId}' not found in {jsonFileName}.");
+        }
+    }
+
     private void ClearContent()
     {
         /*

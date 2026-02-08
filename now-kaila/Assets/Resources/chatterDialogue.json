@@ -95,5 +95,41 @@
       "speaker": "Kaila",
       "message": "Alrighty, talk to you later!"
     }
+    ,
+    {
+      "id": "test_intro",
+      "speaker": "Kaila",
+      "message": "Hi, this test shows me starting the chat.",
+      "options": [
+        { "text": "Hey Kaila!", "nextNodeId": "test_intro_followup" },
+        { "text": "Not now.", "nextNodeId": "" }
+      ]
+    },
+    {
+      "id": "test_intro_followup",
+      "speaker": "Kaila",
+      "message": "Great to hear from you!",
+      "options": [
+        { "text": "Talk later.", "nextNodeId": "test_end" }
+      ]
+    },
+    {
+      "id": "test_user_reply",
+      "speaker": "Kaila",
+      "message": "Thanks for reaching out first! What's up?",
+      "options": [
+        { "text": "Just testing.", "nextNodeId": "test_end" },
+        { "text": "All good.", "nextNodeId": "test_end" }
+      ]
+    },
+    {
+      "id": "test_end",
+      "speaker": "Kaila",
+      "message": "Cool, catch you later.",
+      "options": [
+        { "text": "Bye!", "nextNodeId": "" },
+        { "text": "See ya!", "nextNodeId": "" }
+      ]
+    }
   ]
 }
