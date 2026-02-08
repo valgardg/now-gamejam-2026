@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5062861034275411014}
   - component: {fileID: 940517825179288797}
   - component: {fileID: 2149213817513449056}
-  - component: {fileID: 2561306702413283609}
   m_Layer: 5
   m_Name: PF_MediaPost
   m_TagString: Untagged
@@ -98,21 +97,6 @@ MonoBehaviour:
   postImageTarget: {fileID: 0}
   clickButton: {fileID: 7097845078752414399}
   dialogueController: {fileID: 0}
---- !u!114 &2561306702413283609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1732011379392171482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9410958d11b77407f8441f811e152b85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  imageUrl: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png
-  targetImage: {fileID: 1120360668676386150}
-  autoLoadOnStart: 0
 --- !u!1 &3312973413811010703
 GameObject:
   m_ObjectHideFlags: 0
