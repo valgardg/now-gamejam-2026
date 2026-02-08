@@ -37,4 +37,8 @@ public class HotbarManager : MonoBehaviour
        clueCount += amount;
        clueCounter.text = $"Clues: {clueCount}";
    }
+    public void QuitGame()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+    }
 }
