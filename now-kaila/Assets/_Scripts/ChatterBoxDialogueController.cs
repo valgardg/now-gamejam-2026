@@ -55,9 +55,11 @@ public class ChatterBoxDialogueController : MonoBehaviour
 
     private void ClearContent()
     {
+        /*
         if (contentParent == null) return;
         for (int i = contentParent.childCount - 1; i >= 0; i--)
             Destroy(contentParent.GetChild(i).gameObject);
+        */
     }
 
     private void LoadDialogue()

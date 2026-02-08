@@ -1,17 +1,74 @@
 {
-  "startNodeId": "art",
+  "startNodeId": "intro",
   "nodes": [
+   {
+      "id": "intro",
+      "speaker": "Kaila",
+      "message": "Hey!",
+      "options": [
+        { "text": "Hey! OMG How have you been?", "nextNodeId": "intro_Passive" },
+        { "text": "GIRL!! You disappeared! Where the fuck have you been?", "nextNodeId": "intro_Aggressive" }
+      ]
+    },
+    {
+      "id": "intro_Passive",
+      "speaker": "Kaila",
+      "message": "I Have been well. How are you?",
+      "options": [
+        { "text": "Im doing good. Its been so long since we talked", "nextNodeId": "intro_Progression" },
+        { "text": "Besides waiting for you to finally contact me again, ive been doing great", "nextNodeId": "intro_Progression" }
+      ]
+    },
+    {
+      "id": "intro_Aggressive",
+      "speaker": "Kaila",
+      "message": "What do you mean? I have been here in New York. How are you?",
+      "options": [
+        { "text": "Im doing good. Its been so long since we talked", "nextNodeId": "intro_Progression" },
+        { "text": "Besides waiting for you to finally contact me again, ive been doing great", "nextNodeId": "intro_Progression" }
+      ]
+    },
+    {
+      "id": "intro_Progression",
+      "speaker": "Kaila",
+      "message": "What have you been up to? Besides waiting for me ;P",
+      "options": [
+        { "text": "Im currently in uni studying for a bachelors, u?", "nextNodeId": "intro_goodbye" }
+      ]
+    },
+    {
+      "id": "intro_goodbye",
+      "speaker": "Kaila",
+      "message": "A bachelors? Good on you! I have been making a portfolio.",
+      "options": [
+        { "text": "Dam, youre finally becoming an artist huh. Hey, if you have Sharespace, add me! My username is xXCloudXx", "nextNodeId": "" }
+      ]
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     {
       "id": "art",
       "speaker": "Kaila",
       "message": "Really? What did you think of it? Isn't it cool, neat and exciting?",
       "options": [
-        { "text": "Yeah... it looks pretty good", "nextNodeId": "passive" },
-        { "text": "Is the art you post really made by you?", "nextNodeId": "aggressive" }
+        { "text": "Yeah... it looks pretty good", "nextNodeId": "art_passive" },
+        { "text": "Is the art you post really made by you?", "nextNodeId": "art_aggressive" }
       ]
     },
     {
-      "id": "passive",
+      "id": "art_passive",
       "speaker": "Kaila",
       "message": "Thank you! I have spent a long time working on my art now. It's not about skill, it's about expression.",
       "options": [
@@ -20,7 +77,7 @@
       ]
     },
     {
-      "id": "aggressive",
+      "id": "art_aggressive",
       "speaker": "Kaila",
       "message": "Of course it is! I spent a lot of time creating the pieces I have posted on ShareSpace.",
       "options": [
@@ -31,7 +88,7 @@
     {
       "id": "AggressivePassive",
       "speaker": "Kaila",
-      "message": "That's okay. Everyone makes msitakes, and I can understand the feat-- especially in today's AI driven world.."
+      "message": "That's okay. Everyone makes msitakes, and I can understand the fear-- especially in today's AI driven world.."
     },
     {
       "id": "goodbye",
