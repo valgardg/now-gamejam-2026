@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
+using UnityEngine.Networking;
 
 public class MediaPost : MonoBehaviour
 {
@@ -77,9 +79,31 @@ public class MediaPost : MonoBehaviour
         // Fallback to URL
         if (!string.IsNullOrEmpty(url))
         {
-            var loader = gameObject.GetComponent<LoadURLImage>();
-            if (loader == null) loader = gameObject.AddComponent<LoadURLImage>();
-            loader.CallLoadImageTo(target, url);
+            StartCoroutine(LoadImageFromURL(target, url));
+        }
+    }
+
+    IEnumerator LoadImageFromURL(Image target, string url)
+    {
+        using (UnityWebRequest request = UnityWebRequestTexture.GetTexture(url))
+        {
+            yield return request.SendWebRequest();
+
+            if (request.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError(request.error);
+                yield break;
+            }
+
+            Texture2D texture = DownloadHandlerTexture.GetContent(request);
+
+            Sprite sprite = Sprite.Create(
+                texture,
+                new Rect(0, 0, texture.width, texture.height),
+                new Vector2(0.5f, 0.5f)
+            );
+
+            target.sprite = sprite;
         }
     }
 

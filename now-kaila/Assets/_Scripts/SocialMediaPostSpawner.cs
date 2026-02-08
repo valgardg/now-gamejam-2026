@@ -35,17 +35,13 @@ public class SocialMediaPostSpawner : MonoBehaviour
                 !string.IsNullOrEmpty(postData.postImageUrl) ||
                 !string.IsNullOrEmpty(postData.postImageResource);
 
-            Debug.Log($"Spawning post for {postData.username} with post image: {hasPostImage}");
-
             MediaPost prefabToUse = null;
             if (hasPostImage && postPrefabWithImage != null)
             {
-                Debug.Log("Using prefab with image for this post.");
                 prefabToUse = postPrefabWithImage;
             }
             else if (!hasPostImage && postPrefabWithoutImage != null)
             {
-                Debug.Log("Using prefab without image for this post.");
                 prefabToUse = postPrefabWithoutImage;
             }
 
